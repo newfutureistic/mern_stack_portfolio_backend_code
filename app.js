@@ -67,8 +67,7 @@ dotenv.config({ path: "./config/config.env" });
 const app = express();
 
 // ✅ CORRECTED CORS CONFIG
-const allowedOrigins = ['https://ritikportfolio010.netlify.app',
-  'https://portfoliodashboard010.netlify.app'];
+const allowedOrigins = [process.env.PORTFOLIO_URL, process.env.DASHBOARD_URL];
 
 app.use(
   cors({
