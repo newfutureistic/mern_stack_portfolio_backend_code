@@ -105,6 +105,10 @@ app.use("/api/v1/skill", skillRouter);
 app.use("/api/v1/softwareapplication", softwareApplicationRouter);
 app.use("/api/v1/project", projectRouter);
 
+app.get("/", (req, res) => {
+  res.status(200).send("Portfolio Backend Running");
+});
+
 // DB and error handling
 dbConnection();
 app.use(errorMiddleware);
